@@ -5,11 +5,32 @@ Static website for **Emmi Breazeale's** photography business in **Huntsville, TX
 Pixieset site at https://auburnmuse.mypixieset.com/, whose copy, packages, prices,
 process, and FAQ were carried over in her own voice.
 
-Plain HTML/CSS/JS, no build step. Brand palette was **sampled from Emmi's own
-flier**: green `#48725e`, cream `#feebda`, dark forest ink `#0b3521`. The Roman
-column mark from the flier is recreated as inline SVG (nav + footer) and drawn into
-`favicon.ico` / `img/favicon.png` / `img/apple-touch-icon.png`. Fonts: Cormorant
-Garamond (display), Jost (body), Pinyon Script (script accents, echoing the flier).
+Plain HTML/CSS/JS, no build step. The Roman column mark from the flier is recreated
+as inline SVG (nav + footer) and drawn into `favicon.ico` / `img/favicon.png` /
+`img/apple-touch-icon.png`. Fonts: Cormorant Garamond (display), Jost (body),
+Pinyon Script (script accents, echoing the flier).
+
+## Palette
+
+Greens and cream were **sampled from Emmi's own flier**; rose is the one added hue.
+
+| Token | Hex | Used for |
+|---|---|---|
+| `--green` | `#48725e` | primary: buttons, accents, step markers (5.5:1 behind white) |
+| `--green-deep` | `#35604e` | button hover |
+| `--green-ink` | `#0b3521` | footer, facts strip, photo-band base, headings |
+| `--green-soft` | `#c9d9d0` | hairlines, secondary text on dark |
+| `--green-mist` | `#e9f0ec` | tinted section backgrounds |
+| `--rose` | `#f4dee0` | the closing CTA band (light) |
+| `--rose-deep` | `#8c4f57` | the only rose safe for text, 4.9:1 on the band |
+| `--rose-line` | `#e6c6ca` | CTA band hairlines |
+| `--cream` | `#feebda` | text and buttons on dark bands |
+| `--paper` | `#fdf9f3` | page background |
+| `--ink` / `--ink-soft` | `#22322a` / `#5a685f` | body copy |
+
+The palette was entirely one green hue at first, which made the CTA band and the
+footer read as a single dark slab. The rose fixes that by hue, not lightness, and
+the CTA is deliberately **light** so the page closes light then dark.
 
 ## Pages
 
@@ -55,12 +76,15 @@ domain landed.
 - [ ] **Formspree form ID** — `book.html` still has `YOUR_FORM_ID`; the form shows
       a friendly fallback message until it is set. First real submission needs the
       one-time confirmation email clicked. Free tier: 50/month.
-- [ ] **More portfolio photos** — 5 wedding photos so far (one gallery; the hero
-      `DSC00262` was pulled from her Pixieset home page at the 2500px variant).
-      Emmi's Pixieset has three unnamed galleries; get exports from her, ideally
-      couples/family/senior sessions so the portfolio covers what she sells.
-- [ ] **Social links** — she has an Instagram/Facebook presence ("dm to book") but
-      no URLs were provided. Add to footer, book page, and JSON-LD `sameAs`.
+- [ ] **Photos beyond the one wedding** — every image on the site was pulled from
+      her Pixieset pages (15 in the portfolio). They are all from the same
+      courthouse wedding, plus a few detail shots. She sells mini, couples, and
+      family sessions too, so **ask her for senior / family / maternity work**;
+      until then the pricing page illustrates those packages with wedding frames,
+      which is honest but not ideal.
+- [ ] **Instagram** — her Facebook page is wired in (found in the Pixieset
+      footer). Her profile says "dm to book", so get the Instagram handle and add
+      it to the footers, the booking sidebar, and the JSON-LD `sameAs`.
 - [ ] **Phone number** — intentionally absent (her flow is email/DM). Add if she
       wants one published.
 - [ ] **Bio expansion** — About page uses only her own published words. She may
