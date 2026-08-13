@@ -30,6 +30,9 @@ h3{font-size:1.45rem}
   color:var(--green);margin:0 0 .8rem}
 .script-accent{font-family:var(--script);font-size:clamp(2rem,4vw,3rem);font-weight:400;
   color:var(--green);display:block;line-height:1;margin-bottom:.35rem}
+/* On the dark bands the mid green fails contrast (2.5:1); use the soft tint (9.2:1) */
+.section-dark .script-accent,.cta-ribbon .script-accent,.facts .script-accent,
+.footer .script-accent{color:var(--green-soft)}
 p{margin:.4rem 0 1rem}
 .lead{font-size:1.13rem;color:var(--ink-soft)}
 
@@ -185,7 +188,7 @@ p{margin:.4rem 0 1rem}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;counter-reset:step}
 .step{background:var(--white);border:1px solid var(--green-soft);border-radius:var(--radius);
   padding:1.6rem 1.4rem;position:relative}
-.step .num{font-family:var(--serif);font-size:2.4rem;color:var(--green-soft);font-weight:600;
+.step .num{font-family:var(--serif);font-size:2.4rem;color:var(--green);font-weight:600;
   line-height:1;margin-bottom:.5rem}
 .step h3{font-size:1.15rem}
 .step p{font-size:.94rem;color:var(--ink-soft);margin-bottom:0}
@@ -281,8 +284,11 @@ textarea{min-height:130px;resize:vertical}
     transition:transform .35s ease;box-shadow:-18px 0 50px -20px rgba(11,53,33,.45);
     z-index:70;overflow-y:auto}
   .nav-links.open{transform:none}
+  /* 44px minimum tap targets in the drawer and footer */
+  .nav-links a{padding:.7rem 0;display:block;width:100%}
+  .footer li a{padding:.7rem 0}
   .nav-links .nav-cta{width:100%;justify-content:center;margin-left:0;margin-top:.5rem;
-    display:inline-flex}
+    display:inline-flex;padding:.7rem 1.25rem}
   .nav-toggle{display:block;position:relative;z-index:80}
   .nav-toggle.active span:nth-child(1){transform:translateY(8px) rotate(45deg)}
   .nav-toggle.active span:nth-child(2){opacity:0}
