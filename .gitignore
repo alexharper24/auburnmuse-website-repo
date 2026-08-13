@@ -1,0 +1,26 @@
+# Large source media never gets committed; only the web-optimized derivatives
+# in img/ are. The current files in source-photos/ are small Facebook-sized
+# JPEGs and are tracked deliberately (they are the only copies of the brand
+# fliers and originals we have). If Emmi hands over camera originals
+# (HEIC/RAW/multi-GB folders), they land in source-photos/ and these rules
+# keep them out of git.
+*.heic
+*.HEIC
+*.heif
+*.HEIF
+*.MOV
+*.mov
+*.dng
+*.DNG
+*.psd
+*.PSD
+*.cr2
+*.CR2
+*.arw
+*.ARW
+
+# Secrets, if this repo ever gains a backend
+.env
+.env.*
+.dev.vars
+local.settings.json
