@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,7 +38,8 @@
     "priceRange": "$125-$500",
     "founder": { "@type": "Person", "name": "Emmi Breazeale" },
     "address": { "@type": "PostalAddress", "addressLocality": "Huntsville", "addressRegion": "TX", "addressCountry": "US" },
-    "areaServed": "Huntsville, Texas and surrounding areas"
+    "areaServed": "Huntsville, Texas and surrounding areas",
+    "sameAs": ["https://www.facebook.com/profile.php?id=61593347330712"]
   }
   </script>
 </head>
@@ -95,36 +96,29 @@
       <h2>Pick the session that fits your moment</h2>
       <p class="lead">Every session ends the same way: a gallery of edited photos you can download, share, and keep forever.</p>
     </div>
-    <div class="sessions">
-      <div class="session-card reveal">
-        <h3>Mini Session</h3>
-        <div class="price">$125</div>
-        <div class="len">30 minutes</div>
-        <p>Quick and sweet. Perfect for seniors, maternity, solo portraits, back to school photos, and the pictures you keep putting off.</p>
-        <a href="pricing.html">See details</a>
+    <div class="sessions reveal">
+      <div class="session-row">
+        <div class="s-name">Mini</div>
+        <p class="s-desc"><span class="len">30 minutes</span>Quick and sweet. Perfect for seniors, maternity, solo portraits, back to school photos, and the pictures you keep putting off.</p>
+        <div class="s-price">$125</div>
       </div>
-      <div class="session-card reveal">
-        <h3>Couples</h3>
-        <div class="price">$150</div>
-        <div class="len">1 hour</div>
-        <p>A session devoted to your love story, whether it is a new love, an engagement, or just because.</p>
-        <a href="pricing.html">See details</a>
+      <div class="session-row">
+        <div class="s-name">Couples</div>
+        <p class="s-desc"><span class="len">1 hour</span>A session devoted to your love story, whether it is a new love, an engagement, or just because.</p>
+        <div class="s-price">$150</div>
       </div>
-      <div class="session-card reveal">
-        <h3>Family</h3>
-        <div class="price">$250</div>
-        <div class="len">1 hour</div>
-        <p>A fun, easy, carefree hour dedicated to capturing your family life, at a location you choose.</p>
-        <a href="pricing.html">See details</a>
+      <div class="session-row">
+        <div class="s-name">Family</div>
+        <p class="s-desc"><span class="len">1 hour</span>A fun, easy, carefree hour dedicated to capturing your family life, at a location you choose.</p>
+        <div class="s-price">$250</div>
       </div>
-      <div class="session-card reveal">
-        <h3>Weddings</h3>
-        <div class="price">$500</div>
-        <div class="len">Your whole day</div>
-        <p>Every moment of your special day, posed and candid, delivered in a full online gallery.</p>
-        <a href="pricing.html">See details</a>
+      <div class="session-row">
+        <div class="s-name">Weddings</div>
+        <p class="s-desc"><span class="len">Your whole day</span>Every moment of your special day, posed and candid, delivered in a full online gallery.</p>
+        <div class="s-price">$500</div>
       </div>
     </div>
+    <p class="sessions-note reveal"><a href="pricing.html">See what is included in each session</a></p>
   </div>
 </section>
 
@@ -135,18 +129,29 @@
       <h2>Moments worth keeping</h2>
     </div>
     <div class="feat">
-      <figure class="reveal"><img src="img/wedding-embrace.jpg" alt="A warm embrace between two men in suits outside a brick wedding venue" loading="lazy"></figure>
-      <figure class="reveal"><img src="img/wedding-bouquets.jpg" alt="A bride and her bridesmaids hold bouquets of white hydrangeas in a close up detail photo" loading="lazy"></figure>
-      <figure class="reveal"><img src="img/wedding-rings.jpg" alt="A close up of a couple's hands showing their wedding rings" loading="lazy"></figure>
+      <figure class="f-1 reveal"><img src="img/wedding-bride-twirl.jpg" alt="A bride twirls her chiffon skirt in front of a red brick wall, holding a white hydrangea bouquet" loading="lazy"></figure>
+      <figure class="f-2 arch reveal"><img src="img/wedding-kiss-doorway.jpg" alt="A groom dips his bride for a kiss in the dark arched doorway of a historic courthouse" loading="lazy"></figure>
+      <figure class="f-3 reveal"><img src="img/wedding-bouquets.jpg" alt="A bride and her bridesmaids hold bouquets of white hydrangeas in a close up detail photo" loading="lazy"></figure>
     </div>
     <p class="gallery-note reveal"><a href="portfolio.html">See more in the portfolio</a></p>
+  </div>
+</section>
+
+<section class="photo-band">
+  <img src="img/wedding-courthouse-facade.jpg" alt="A bride and groom stand together on the steps of an ornate historic courthouse" loading="lazy">
+  <div class="band-scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <p>every couple has a story worth keeping</p>
+    <p class="band-sub">Huntsville, Texas and surrounding areas</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <div class="about-grid">
-      <img src="img/emmi.jpg" alt="Emmi Breazeale smiling with a dalmatian puppy in her arms" loading="lazy" class="reveal" width="800" height="1000">
+      <div class="about-photo reveal">
+        <img src="img/emmi.jpg" alt="Emmi Breazeale smiling with a dalmatian puppy in her arms" loading="lazy" width="800" height="1000">
+      </div>
       <div class="reveal">
         <p class="eyebrow">Hi, I'm Emmi</p>
         <h2>Welcome to Auburn Muse Photography</h2>
@@ -193,12 +198,13 @@
       <ul>
         <li><a href="mailto:auburnmusephotography@gmail.com">auburnmusephotography@gmail.com</a></li>
         <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Huntsville%2C+TX" target="_blank" rel="noopener">Huntsville, TX and surrounding areas</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61593347330712" target="_blank" rel="noopener">Follow on Facebook</a></li>
       </ul>
     </div>
   </div>
   <div class="foot-bottom"><div class="wrap">&copy; <span id="year">2026</span> Auburn Muse Photography &middot; Huntsville, Texas</div></div>
 </footer>
 
-<script src="main.js?v=2"></script>
+<script src="main.js?v=3"></script>
 </body>
 </html>
