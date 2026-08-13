@@ -15,7 +15,7 @@ Garamond (display), Jost (body), Pinyon Script (script accents, echoing the flie
 
 | Page | Purpose |
 |---|---|
-| `index.html` | Hero (bride on steps), facts strip, session cards with prices, featured photos, about teaser |
+| `index.html` | Full-background hero (the couple-by-the-columns photo from her Pixieset home page, over a brand-green scrim), facts strip, session cards with prices, featured photos, about teaser |
 | `portfolio.html` | Masonry gallery + lightbox (4 wedding photos so far) |
 | `pricing.html` | The four packages with her real prices, four-step process |
 | `about.html` | Emmi's story in her own words, what-to-expect cards |
@@ -55,7 +55,8 @@ domain landed.
 - [ ] **Formspree form ID** — `book.html` still has `YOUR_FORM_ID`; the form shows
       a friendly fallback message until it is set. First real submission needs the
       one-time confirmation email clicked. Free tier: 50/month.
-- [ ] **More portfolio photos** — only 4 wedding photos so far (one gallery).
+- [ ] **More portfolio photos** — 5 wedding photos so far (one gallery; the hero
+      `DSC00262` was pulled from her Pixieset home page at the 2500px variant).
       Emmi's Pixieset has three unnamed galleries; get exports from her, ideally
       couples/family/senior sessions so the portfolio covers what she sells.
 - [ ] **Social links** — she has an Instagram/Facebook presence ("dm to book") but

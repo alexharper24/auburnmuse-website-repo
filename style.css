@@ -78,18 +78,30 @@ p{margin:.4rem 0 1rem}
   border-radius:2px;transition:transform .3s ease,opacity .3s ease}
 .nav-overlay{display:none}
 
-/* ---------- hero (split editorial) ---------- */
-.hero{background:var(--cream-soft);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;
-  padding:3.5rem 0 4rem}
-.hero-copy .lead{max-width:44ch}
+/* ---------- hero (full-background photo, Emmi's Pixieset hero image) ---------- */
+.hero-full{position:relative;min-height:min(88vh,760px);display:flex;align-items:center;
+  background:var(--green-ink);overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:70% 38%}
+/* Brand-green scrim, heaviest under the copy on the left. White/cream text stays
+   readable over the light stone (measured 4.9:1 or better within the copy column). */
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(100deg,
+  rgba(11,53,33,.9) 0%,rgba(11,53,33,.78) 42%,rgba(11,53,33,.36) 70%,
+  rgba(11,53,33,.14) 100%)}
+.hero-full .hero-copy{text-shadow:0 1px 10px rgba(11,53,33,.4)}
+.hero-full .wrap{position:relative;z-index:1;padding:5rem 0 5.5rem}
+.hero-full .hero-copy{max-width:580px}
+.hero-full h1{color:#fff}
+.hero-full .script-accent{color:var(--green-soft)}
+.hero-full .lead{color:var(--cream);max-width:46ch}
+.hero-full .btn-primary{background:var(--cream);color:var(--green-ink)}
+.hero-full .btn-ghost{color:#fff;border-color:rgba(255,255,255,.85);
+  background:rgba(11,53,33,.35)}
+@media (hover:hover){
+  .hero-full .btn-primary:hover{background:#fff;color:var(--green-ink)}
+  .hero-full .btn-ghost:hover{background:#fff;color:var(--green-ink);border-color:#fff}
+}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
-.hero-photo{position:relative}
-.hero-photo img{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/5;
-  object-fit:cover;width:100%}
-.hero-photo::before{content:"";position:absolute;inset:1.4rem -1.4rem -1.4rem 1.4rem;
-  border:2px solid var(--green-soft);border-radius:var(--radius);z-index:0}
-.hero-photo img{position:relative;z-index:1}
 
 /* ---------- facts strip ---------- */
 .facts{background:var(--green-ink);color:var(--cream)}
@@ -264,6 +276,9 @@ textarea{min-height:130px;resize:vertical}
   .btn-ghost:hover{background:transparent;color:var(--green-ink)}
   .section-dark .btn-primary:hover{background:var(--cream);color:var(--green-ink)}
   .section-dark .btn-ghost:hover{background:transparent;color:var(--cream)}
+  .hero-full .btn-primary:hover{background:var(--cream);color:var(--green-ink)}
+  .hero-full .btn-ghost:hover{background:rgba(11,53,33,.35);color:#fff;
+    border-color:rgba(255,255,255,.85)}
 }
 
 /* ---------- responsive ---------- */
@@ -297,7 +312,12 @@ textarea{min-height:130px;resize:vertical}
     opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;z-index:60}
   .nav-overlay.open{opacity:1;visibility:visible}
 
-  .hero .wrap{grid-template-columns:1fr;padding:2.6rem 0 3rem}
+  .hero-full{min-height:78vh}
+  .hero-full .wrap{padding:3.2rem 0 3.6rem}
+  /* On small screens the copy spans the photo, so the scrim goes heavier and vertical */
+  .hero-scrim{background:linear-gradient(180deg,rgba(11,53,33,.62) 0%,
+    rgba(11,53,33,.74) 55%,rgba(11,53,33,.86) 100%)}
+  .hero-bg{object-position:62% 30%}
   .about-grid,.book-grid{grid-template-columns:1fr}
   .packages{grid-template-columns:1fr}
   .feat{grid-template-columns:1fr;gap:1rem}
@@ -327,11 +347,10 @@ textarea{min-height:130px;resize:vertical}
   .nav,.nav-links{background:var(--paper) !important}
   .session-card,.value-card,.package,.step,.form-panel,.side-card,.faq details,
   .form-thanks{background:var(--white) !important;color:var(--ink) !important}
-  .hero{background:var(--cream-soft) !important}
   .section-tint{background:var(--green-mist) !important}
   input,select,textarea{background:var(--paper) !important;color:var(--ink) !important}
   /* deliberately dark surfaces stay dark */
-  .facts,.section-dark,.cta-ribbon,.footer{background:var(--green-ink) !important;
+  .facts,.section-dark,.cta-ribbon,.footer,.hero-full{background:var(--green-ink) !important;
     color:var(--cream) !important}
   .lightbox{background:rgba(11,53,33,.92) !important}
 }
