@@ -134,18 +134,26 @@ p{margin:.4rem 0 1rem}
    rows instead: the price carries the visual weight and the rules carry the
    rhythm, so the section reads as a printed rate card. */
 .sessions{border-top:2px solid var(--rule-strong)}
-.session-row{display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem 2rem;
-  align-items:baseline;padding:1.5rem .75rem;border-bottom:1px solid var(--rule);
-  transition:background .2s ease}
-.session-row .s-name{font-family:var(--serif);font-size:1.95rem;font-weight:600;
-  color:var(--green-ink);min-width:9ch}
-.session-row .s-desc{color:var(--ink);font-size:1.02rem;margin:0}
-.session-row .s-desc .len{display:block;font-size:.74rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--green-deep);font-weight:600;margin-bottom:.3rem}
-.session-row .s-price{font-family:var(--serif);font-size:2.5rem;font-weight:700;
-  color:var(--green-deep);white-space:nowrap;line-height:1}
-@media (hover:hover){.session-row:hover{background:rgba(255,255,255,.6)}}
-.sessions-note{margin-top:1.8rem;font-size:1.02rem}
+.session-row{display:grid;grid-template-columns:minmax(10rem,auto) 1fr auto;
+  gap:1rem 2.5rem;align-items:start;padding:1.7rem .75rem;
+  border-bottom:1px solid var(--rule);transition:background .2s ease}
+.session-row .s-head{padding-top:.1rem}
+.session-row .s-name{font-family:var(--serif);font-size:2rem;font-weight:600;
+  color:var(--green-ink);line-height:1.1}
+.session-row .len{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--green-deep);font-weight:600;margin-top:.3rem}
+.session-row .s-desc{color:var(--ink);font-size:1.06rem;margin:0 0 .7rem;max-width:52ch}
+/* What you actually get. This is the information people are scanning for, so it
+   is on the card rather than only on the pricing page. */
+.session-row .s-meta{list-style:none;margin:0;padding:0;display:flex;
+  flex-wrap:wrap;gap:.4rem .5rem}
+.session-row .s-meta li{font-size:.86rem;font-weight:500;color:var(--green-deep);
+  background:var(--green-mist);border:1px solid var(--rule);border-radius:999px;
+  padding:.25rem .75rem;white-space:nowrap}
+.session-row .s-price{font-family:var(--serif);font-size:2.6rem;font-weight:700;
+  color:var(--green-deep);white-space:nowrap;line-height:1;text-align:right}
+@media (hover:hover){.session-row:hover{background:var(--green-mist)}}
+.sessions-note{margin-top:1.8rem;font-size:1.02rem;color:var(--ink-soft)}
 .sessions-note a{font-weight:600}
 
 /* ---------- featured photo strip (staggered, not a flat row) ----------
@@ -173,8 +181,10 @@ p{margin:.4rem 0 1rem}
   align-items:center;justify-content:center;text-align:center;overflow:hidden;
   background:var(--green-ink)}
 .photo-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* Neutral charcoal, not green. A green scrim tinted the photograph itself;
+   this darkens for legibility without colouring her work. */
 .photo-band .band-scrim{position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(16,40,28,.42),rgba(16,40,28,.62))}
+  background:linear-gradient(180deg,rgba(18,19,18,.4),rgba(18,19,18,.6))}
 .photo-band .wrap{position:relative;z-index:1;padding:3rem 0}
 .photo-band p{color:#fff;font-family:var(--script);
   font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.25;margin:0;
@@ -392,9 +402,10 @@ textarea{min-height:130px;resize:vertical}
     opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;z-index:60}
   .nav-overlay.open{opacity:1;visibility:visible}
 
-  .session-row{grid-template-columns:1fr auto;gap:.4rem 1.2rem}
-  .session-row .s-name{font-size:1.5rem;min-width:0}
-  .session-row .s-desc{grid-column:1 / -1}
+  .session-row{grid-template-columns:1fr auto;gap:.5rem 1.2rem;padding:1.4rem .25rem}
+  .session-row .s-name{font-size:1.6rem}
+  .session-row .s-price{font-size:2.1rem}
+  .session-row .s-body{grid-column:1 / -1}
   .photo-band{min-height:44vh}
   .about-photo::after{display:none}
   .hero-full{min-height:78vh}
