@@ -72,8 +72,36 @@ can review by URL while search engines stay out. At launch: remove the noindex
 meta from every page, flip robots.txt to `Allow: /`, and update canonicals if a
 domain landed.
 
+## Pricing: where the numbers come from
+
+Session prices and deliverables are copied verbatim from
+`auburnmuse.mypixieset.com/book/`, **re-read 2026-08-13**:
+
+| Package | Duration | Price | Deliverable | Turnaround |
+|---|---|---|---|---|
+| Mini | 30 minutes | $65 | 10&ndash;20 edited images | 2&ndash;3 weeks |
+| Couples | 1 hour | $125 | 15&ndash;25 edited images | 2&ndash;3 weeks |
+| Family | 1 hour (inquire for longer) | $200 | 30&ndash;50 edited images | 2&ndash;3 weeks |
+| Weddings | not stated on her page | $450 | 150&ndash;450 photos | 6 weeks |
+
+Travel fees may apply on all of them.
+
+An earlier read of the same page returned $125 / $150 / $250 / $500 and
+7&ndash;15 images for Mini, and those wrong numbers were briefly published on
+2026-08-13 before being corrected the same day. Cause was not determined: either
+Pixieset served a stale cache or Emmi changed her prices. **Treat this table as
+needing Emmi's confirmation, and re-check her page before any future edit that
+touches pricing.** Prices are hers to set and must never be inferred.
+
+Prices appear in six places, so change all of them together:
+`index.html` (JSON-LD `priceRange`, meta description, facts strip, four session
+rows), `pricing.html` (meta description, og:description, four packages),
+`book.html` (session-type dropdown), `portfolio.html` (CTA "sessions start at").
+
 ## Pending (the project tracker — keep current)
 
+- [ ] **Emmi to confirm the pricing table above** is current. It was wrong once
+      already (see the pricing section), so it is worth one explicit check.
 - [ ] **Formspree form ID** — `book.html` still has `YOUR_FORM_ID`; the form shows
       a friendly fallback message until it is set. First real submission needs the
       one-time confirmation email clicked. Free tier: 50/month.
