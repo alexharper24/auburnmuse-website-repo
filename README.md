@@ -56,13 +56,14 @@ Run checks before committing:
 python ../site-checks/check_site.py .
 ```
 
-## Deploy
+## Live
 
-GitHub Pages under github.com/alexharper24: create the `auburnmuse-website-repo`
-repo, push `main`, Settings → Pages → Deploy from branch → `main` / root.
-Canonical/OG/sitemap URLs currently point at
-`https://alexharper24.github.io/auburnmuse-website-repo/`; swap them (and the
-absolute URLs in `404.html`) when a custom domain is chosen.
+**https://alexharper24.github.io/auburnmuse-website-repo/**
+
+Published 2026-08-13 on GitHub Pages (deploy from `main` / root, HTTPS enforced).
+Pushing to `main` redeploys in about a minute. Canonical, OG, sitemap, and the
+absolute URLs in `404.html` all point at that address; swap them when a custom
+domain is chosen.
 
 ## DRAFT MODE — currently ON
 
