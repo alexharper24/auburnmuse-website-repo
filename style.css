@@ -134,9 +134,11 @@ p{margin:.4rem 0 1rem}
    rows instead: the price carries the visual weight and the rules carry the
    rhythm, so the section reads as a printed rate card. */
 .sessions{border-top:2px solid var(--rule-strong)}
+/* The whole row is a link through to its package on the pricing page. */
 .session-row{display:grid;grid-template-columns:minmax(10rem,auto) 1fr auto;
   gap:1rem 2.5rem;align-items:start;padding:1.7rem .75rem;
-  border-bottom:1px solid var(--rule);transition:background .2s ease}
+  border-bottom:1px solid var(--rule);transition:background .2s ease,border-color .2s ease;
+  text-decoration:none;color:inherit;position:relative}
 .session-row .s-head{padding-top:.1rem}
 .session-row .s-name{font-family:var(--serif);font-size:2rem;font-weight:600;
   color:var(--green-ink);line-height:1.1}
@@ -145,14 +147,28 @@ p{margin:.4rem 0 1rem}
 .session-row .s-desc{color:var(--ink);font-size:1.06rem;margin:0 0 .7rem;max-width:52ch}
 /* What you actually get. This is the information people are scanning for, so it
    is on the card rather than only on the pricing page. */
+/* Flat inline list, divided by thin rules, rather than pills. */
 .session-row .s-meta{list-style:none;margin:0;padding:0;display:flex;
-  flex-wrap:wrap;gap:.4rem .5rem}
-.session-row .s-meta li{font-size:.86rem;font-weight:500;color:var(--green-deep);
-  background:var(--green-mist);border:1px solid var(--rule);border-radius:999px;
-  padding:.25rem .75rem;white-space:nowrap}
+  flex-wrap:wrap;gap:.2rem 1rem}
+.session-row .s-meta li{font-size:.88rem;font-weight:500;color:var(--green-deep);
+  letter-spacing:.02em;white-space:nowrap;padding-left:1rem;border-left:1px solid var(--rule)}
+.session-row .s-meta li:first-child{padding-left:0;border-left:0}
 .session-row .s-price{font-family:var(--serif);font-size:2.6rem;font-weight:700;
   color:var(--green-deep);white-space:nowrap;line-height:1;text-align:right}
-@media (hover:hover){.session-row:hover{background:var(--green-mist)}}
+/* "See details" affordance. Kept subtle with weight and size rather than opacity:
+   a faded label measured 4.2:1, under the 4.5:1 floor for text this small. */
+.session-row .s-more{display:block;font-family:var(--sans);font-size:.78rem;
+  font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-deep);
+  margin-top:.6rem;transition:gap .2s ease}
+.session-row .s-more::after{content:" \2192";display:inline-block;
+  transition:transform .2s ease}
+@media (hover:hover){
+  .session-row:hover{background:var(--green-mist);border-bottom-color:var(--rule-strong)}
+  .session-row:hover .s-more{text-decoration:underline}
+  .session-row:hover .s-more::after{transform:translateX(4px)}
+  .session-row:hover .s-name{color:var(--green-deep)}
+}
+.session-row:focus-visible{outline:3px solid var(--green);outline-offset:-3px}
 .sessions-note{margin-top:1.8rem;font-size:1.02rem;color:var(--ink-soft)}
 .sessions-note a{font-weight:600}
 
@@ -257,7 +273,9 @@ p{margin:.4rem 0 1rem}
    Alternating photo/text rows instead of a 2x2 grid of boxes. Each package gets
    a real photograph, and every other row flips so the eye zigzags down the page. */
 .packages{display:grid;gap:3.5rem}
-.package{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.8rem;align-items:center}
+/* Landing here from the home page: clear the sticky header. */
+.package{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.8rem;align-items:center;
+  scroll-margin-top:6rem}
 .package:nth-child(even) .pkg-photo{order:2}
 .package .pkg-photo{margin:0;border-radius:var(--radius);overflow:hidden;
   box-shadow:var(--shadow-sm)}
