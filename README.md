@@ -72,26 +72,61 @@ can review by URL while search engines stay out. At launch: remove the noindex
 meta from every page, flip robots.txt to `Allow: /`, and update canonicals if a
 domain landed.
 
-## Pricing: where the numbers come from
+## Pricing: PROPOSED, not yet approved by Emmi
 
-Session prices and deliverables are copied verbatim from
-`auburnmuse.mypixieset.com/book/`, **re-read 2026-08-13**:
+> **The prices on this site are a recommendation, not what Emmi currently charges.**
+> Alex asked for a beginner-reasonable ladder on 2026-08-13 and approved the numbers
+> below. **Emmi has not seen or agreed to them.** This is the main reason the site
+> must stay in draft mode until she signs off. Do not send her clients here, and do
+> not lift draft mode, until she confirms.
 
-| Package | Duration | Price | Deliverable | Turnaround |
-|---|---|---|---|---|
-| Mini | 30 minutes | $65 | 10&ndash;20 edited images | 2&ndash;3 weeks |
-| Couples | 1 hour | $125 | 15&ndash;25 edited images | 2&ndash;3 weeks |
-| Family | 1 hour (inquire for longer) | $200 | 30&ndash;50 edited images | 2&ndash;3 weeks |
-| Weddings | not stated on her page | $450 | 150&ndash;450 photos | 6 weeks |
+| Package | Duration | Her current price | **On this site** | Deliverable | Turnaround |
+|---|---|---|---|---|---|
+| Mini | 30 minutes | $65 | **$85** | 10&ndash;20 edited images | 2&ndash;3 weeks |
+| Couples | 1 hour | $125 | **$150** | 15&ndash;25 edited images | 2&ndash;3 weeks |
+| Family | 1 hour (inquire for longer) | $200 | **$225** | 30&ndash;50 edited images | 2&ndash;3 weeks |
+| Weddings | not stated on her page | $450 | **$900** | 150&ndash;450 photos | 6 weeks |
 
-Travel fees may apply on all of them.
+Travel fees may apply on all of them. Deliverables and turnaround are unchanged and
+still verbatim from her Pixieset page.
 
-An earlier read of the same page returned $125 / $150 / $250 / $500 and
-7&ndash;15 images for Mini, and those wrong numbers were briefly published on
-2026-08-13 before being corrected the same day. Cause was not determined: either
-Pixieset served a stale cache or Emmi changed her prices. **Treat this table as
-needing Emmi's confirmation, and re-check her page before any future edit that
-touches pricing.** Prices are hers to set and must never be inferred.
+### Why these numbers
+
+Effective hourly rate on her own published deliverables, including travel, culling,
+editing, and admin:
+
+| Session | At her price | Realistic hours | Gross/hr |
+|---|---|---|---|
+| Mini | $65 | ~3.5 | ~$19 |
+| Couples | $125 | ~4.5 | ~$28 |
+| Family | $200 | ~6 | ~$33 |
+| Weddings | $450 | ~23&ndash;37 | **~$12&ndash;20** |
+
+That is gross, before gear, insurance, gallery hosting, software, mileage, and
+self-employment tax at 15.3%.
+
+**The wedding was the structural problem.** At $450 it was 3.5x the couples session for
+20&ndash;30x the labour; the normal ratio is 6&ndash;15x. At $900 it sits at 6x, the
+bottom of that band, and still well under the $800&ndash;1,500 typical of beginner
+wedding photographers. The portrait tiers moved only slightly, deliberately, since they
+were already defensible for someone building a book.
+
+### Still worth doing (not applied, since it changes her offer rather than her price)
+
+- **Trim the deliverables.** 150&ndash;450 edited wedding images and 30&ndash;50 for a
+  one-hour family session are generous by professional standards. Cutting the wedding to
+  "8 hours coverage, 250+ images" cuts her workload a lot without touching price, and a
+  curated gallery is a better product than an exhaustive one.
+- **Retire the "DISCOUNTED" / "LOW PRICE" framing** on her fliers once the portfolio
+  fills. Clients acquired on price are the hardest to raise later.
+- **Give the portfolio-building phase an end condition** ("next 5 bookings") and raise
+  from there.
+
+An earlier read of her page returned $125 / $150 / $250 / $500 and 7&ndash;15 images
+for Mini, and those wrong numbers were briefly published on 2026-08-13 before being
+corrected the same day. Cause was not determined: either Pixieset served a stale cache
+or Emmi changed her prices. **Re-check her live page before any future edit that touches
+pricing.** Prices are hers to set and must never be inferred.
 
 Prices appear in six places, so change all of them together:
 `index.html` (JSON-LD `priceRange`, meta description, facts strip, four session
@@ -100,8 +135,10 @@ rows), `pricing.html` (meta description, og:description, four packages),
 
 ## Pending (the project tracker — keep current)
 
-- [ ] **Emmi to confirm the pricing table above** is current. It was wrong once
-      already (see the pricing section), so it is worth one explicit check.
+- [ ] **Emmi to approve the proposed pricing** ($85 / $150 / $225 / $900). These are a
+      recommendation Alex signed off on, not her published rates, and the wedding is
+      double what she currently charges. **This blocks launch.** If she declines, revert
+      to $65 / $125 / $200 / $450 in the six places listed below.
 - [ ] **Formspree form ID** — `book.html` still has `YOUR_FORM_ID`; the form shows
       a friendly fallback message until it is set. First real submission needs the
       one-time confirmation email clicked. Free tier: 50/month.
